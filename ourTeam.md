@@ -20,6 +20,27 @@ feature_image: https://bi-stem-away.github.io/shiny_app_dev/images/Banner3.jpg
   </tbody>
 </table>
 <br>
+<table>
+  <thead>
+    <tr>
+      <!-- Names -->
+      <th><img src="https://bi-stem-away.github.io/shiny_app_dev/images/S.png" alt="" height="150"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Images -->
+    <tr>
+      <td>Name: </td>
+      <td>Samuel Bharti</td>
+    </tr>
+    <tr>
+      <td>Role: </td>
+      <td>Bioinformatics Pathway Lead</td>
+      <td>Pathway Technical Lead</td>
+    </tr>
+  </tbody>
+</table>
+<br>
 ##### Project Management Leads:
 <table>
   <thead>

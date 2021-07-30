@@ -5,11 +5,23 @@ feature_image: https://bi-stem-away.github.io/shiny_app_dev/images/Banner3.jpg
 ---
 
 ##### Project Technical Lead:
-|  <img src="https://bi-stem-away.github.io/shiny_app_dev/images/S.png" alt="" height="150"> |
-|---|
-| Samuel Bharti |
-| Bioinformatics Pathway Lead  |
-
+<table>
+  <thead>
+    <tr>
+      <!-- Names -->
+      <th><img src="https://bi-stem-away.github.io/shiny_app_dev/images/S.png" alt="" height="150"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Images -->
+    <tr>
+      <td>Samuel Bharti</td>
+    </tr>
+    <tr>
+      <td>Bioinformatics Pathway Lead</td>
+    </tr>
+  </tbody>
+</table>
 <br>
 ##### Project Management Leads:
 <table>

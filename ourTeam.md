@@ -15,10 +15,10 @@ feature_image: https://bi-stem-away.github.io/shiny_app_dev/images/Banner3.jpg
   <tbody>
     <!-- Images -->
     <tr>
-      <td>Samuel Bharti</td>
+      <td style="text-align:center">Samuel Bharti</td>
     </tr>
     <tr>
-      <td>Bioinformatics Pathway Lead</td>
+      <td style="text-align:center">Bioinformatics Pathway Lead</td>
     </tr>
   </tbody>
 </table>

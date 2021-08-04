@@ -5,6 +5,10 @@ feature_image: https://bi-stem-away.github.io/shiny_app_dev/images/Banner3.jpg
 ---
 
 ##### Project Technical Lead:
+| | | 
+|:---------------------------:|------------------------------------------------------|
+|<img height="150" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg"> | Name: Disha <br> Role: Management <br> Education Background: High School <br> Contributions: Teams Lead, Management, Backend App Developer, Web-design|
+
 <table>
   <thead>
     <tr>

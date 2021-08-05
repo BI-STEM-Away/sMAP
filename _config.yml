@@ -89,7 +89,7 @@ defaults:
 encoding: utf-8 # Make sure the encoding is right
 lang: en-GB # Set the site language
 title: "R Shiny Educational Transcriptomics App" # Site name or title, also used in jekyll-seo-tag
-logo: /images/logo_size-removebg-preview.png" # Site logo, also used in jekyll-seo-tag
+logo: /images/sMAP_logo.jpg" # Site logo, also used in jekyll-seo-tag
 description: "R Shiny Educational Transcriptomics App created by the Summer 2021 STEM-Away Bioinformatics Teams" # Site description and default description, also used in jekyll-seo-tag
 url: "https://huikunli.github.io/BI-RShiny" # Site url, also used in jekyll-seo-tag
 repo: "https://github.com/orgs/Bioinformatics-Pathway-STEM-Away/dashboard"

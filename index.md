@@ -1,9 +1,8 @@
 ---
-title: About Our App
+title: About sMAP
 feature_text: | 
   ## sMAP: Standard Microarray Analysis Pipeline App
   An R Shiny educational app to guide users through a interactive transcriptomics pipeline
-color="#88B98F" 
 ---
 
 sMAP was made to help users understand a standard transcriptomics pipeline by taking them through the steps of microarray analysis. sMAP has an interactive user interface where users upload a GEO dataset and explore functions for quality control, statistical analysis, and functional analysis to find potential biomarkers. 

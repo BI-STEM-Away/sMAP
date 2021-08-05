@@ -3,8 +3,7 @@ title: About Our App
 feature_text: |
   ## sMAP: Standard Microarray Analysis Pipeline App
   An R Shiny educational app to guide users through a interactive transcriptomics pipeline
-feature_image: https://bi-stem-away.github.io/shiny_app_dev/images/Banner3.jpg
-excerpt: "Our goal for creating this educational app is to help experts and intellectuals easily access the transcriptomics information and data they need. On this web page, users can view the project details via the links on the front page."
+
 ---
 
 Our app was made to help users understand a standard transcriptomics pipeline by taking them through the steps of microarray analysis. The app has an interactive user interface where users upload a GEO dataset and then explore and try out functions for quality control, statistical analysis, and functional analysis to find potential biomarkers.

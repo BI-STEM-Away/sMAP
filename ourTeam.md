@@ -223,7 +223,7 @@
       height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/IMG_9040_copy.jpg">
       </td>
-      <td style="font-size:85%;padding:5px;">
+      <td style="font-size:85%;padding:5px; width:250px !important">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
       Sneha Raj</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
@@ -247,7 +247,7 @@
       height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/Maryam.jpg">
       </td>
-      <td style="font-size:85%;padding:5px;">
+      <td style="font-size:85%;padding:5px;max-width:250px">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
       Maryam Momeni</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
@@ -271,7 +271,7 @@
       height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/Modupe.jpg">
       </td>
-      <td style="font-size:85%;padding:5px;">
+      <td style="font-size:85%;padding:5px; max-width:70%" >
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
       Modupe Arotiba</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">

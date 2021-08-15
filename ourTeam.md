@@ -12,7 +12,7 @@
       <td style="font-size:85%;padding:5px;">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">Samuel Bharti</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
-      Disha proficiently handled project logistics and contributed in app and web developement.<br>
+      Samuel designed the project plans, everything from techinical to logistics and directly contributed in sMAP User Interface Developement. He also supervised overall developement of sMAP's app, project site and documentation.<br>
       Socials:
       <a href="mailto:samuelbharti@gmail.com">Email</a>
       <a target='_blank' href="https://www.linkedin.com/in/samuelbharti/">LinkedIn</a>
@@ -35,7 +35,7 @@
       <td style="font-size:85%;padding:5px;">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">Disha Chauhan</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
-      Disha proficiently handled project logistics and contributed in app and web developement.<br>
+      Disha proficiently managed project logistics throughout the developement period. She also contributed in sMAP's backend code and project site developement. She did all this while still being at High School!<br>
       Socials:
       <a href="mailto:samuelbharti@gmail.com">Email</a>
       <a target='_blank' href="https://www.linkedin.com/in/samuelbharti/">LinkedIn</a>
@@ -59,7 +59,7 @@
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
       Nikita Krishnan	</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
-      Disha proficiently handled project logistics and contributed in app and web developement.<br>
+      Nikita not only developed sMAP's backend functions but also accomplished the challenge of intergrating code of other participants and make everything beautifully functional.<br>
       Socials:
       <a href="mailto:samuelbharti@gmail.com">Email</a>
       <a target='_blank' href="https://www.linkedin.com/in/samuelbharti/">LinkedIn</a>
@@ -83,7 +83,7 @@
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
       Arian Veyssi</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
-      Disha proficiently handled project logistics and contributed in app and web developement.<br>
+      Arian helped in sMAP's User Interface designing and she also worked with in bringing an extremely simple and useful tutorial of sMAP for users.<br>
       Socials:
       <a href="mailto:samuelbharti@gmail.com">Email</a>
       <a target='_blank' href="https://www.linkedin.com/in/samuelbharti/">LinkedIn</a>
@@ -107,7 +107,7 @@
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
       Roman Ramirez</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
-      Disha proficiently handled project logistics and contributed in app and web developement.<br>
+      Roman worked in User Interface developement and hosting meetings on same. He contributed directly in frontend code along Arian and Ivan.<br>
       Socials:
       <a href="mailto:samuelbharti@gmail.com">Email</a>
       <a target='_blank' href="https://www.linkedin.com/in/samuelbharti/">LinkedIn</a>
@@ -131,7 +131,7 @@
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
       Aditi Verma</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
-      Disha proficiently handled project logistics and contributed in app and web developement.<br>
+      Aditi is another talented high school student we had the pleasure to work with.She solved the challenge of compiling documentation of sMAP from different teams. <br>
       Socials:
       <a href="mailto:samuelbharti@gmail.com">Email</a>
       <a target='_blank' href="https://www.linkedin.com/in/samuelbharti/">LinkedIn</a>
@@ -155,7 +155,7 @@
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
       Huikun Li</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
-      Disha proficiently handled project logistics and contributed in app and web developement.<br>
+      Kelly contributed in developement of sMAP's project website. She along Disha and Modupe made this site online in just 2 weeks.<br>
       Socials:
       <a href="mailto:samuelbharti@gmail.com">Email</a>
       <a target='_blank' href="https://www.linkedin.com/in/samuelbharti/">LinkedIn</a>
@@ -179,7 +179,7 @@
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
       Shreya Vora</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
-      Disha proficiently handled project logistics and contributed in app and web developement.<br>
+      Shreya was one of the best presenters we had. She contributed in backend of sMAP and helped in documentation editing.<br>
       Socials:
       <a href="mailto:samuelbharti@gmail.com">Email</a>
       <a target='_blank' href="https://www.linkedin.com/in/samuelbharti/">LinkedIn</a>
@@ -203,7 +203,7 @@
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
       Ivan Lam</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
-      Disha proficiently handled project logistics and contributed in app and web developement.<br>
+      Ivan also contributed in sMAP's User Interface Developement along Arian and Roman.<br>
       Socials:
       <a href="mailto:samuelbharti@gmail.com">Email</a>
       <a target='_blank' href="https://www.linkedin.com/in/samuelbharti/">LinkedIn</a>
@@ -227,7 +227,7 @@
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
       Sneha Raj</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
-      Disha proficiently handled project logistics and contributed in app and web developement.<br>
+      Sneha is also a high school senior and joined us in later part of sMAP developement. She contributed in sMAP presentations, creative ideas and logistic tasks.<br>
       Socials:
       <a href="mailto:samuelbharti@gmail.com">Email</a>
       <a target='_blank' href="https://www.linkedin.com/in/samuelbharti/">LinkedIn</a>
@@ -251,7 +251,7 @@
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
       Maryam Momeni</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
-      Disha proficiently handled project logistics and contributed in app and web developement.<br>
+      Maryam having prior experience contributed directly in sMAP backend pipeline developement.<br>
       Socials:
       <a href="mailto:samuelbharti@gmail.com">Email</a>
       <a target='_blank' href="https://www.linkedin.com/in/samuelbharti/">LinkedIn</a>
@@ -275,7 +275,7 @@
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
       Modupe Arotiba</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
-      Disha proficiently handled project logistics and contributed in app and web developement.<br>
+      Modupe helped in logistic tasks and most importantly interviewing interns about their experience and learning throughout the project. They can be found under Intern Experience section.<br>
       Socials:
       <a href="mailto:samuelbharti@gmail.com">Email</a>
       <a target='_blank' href="https://www.linkedin.com/in/samuelbharti/">LinkedIn</a>

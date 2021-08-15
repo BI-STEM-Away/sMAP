@@ -32,10 +32,9 @@ feature_text: |
       <img style="border: 2px solid black;" height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
       </td>
-      <td style="margin-bottom:0;padding:0;border: 2px solid black;" >
-      <div style="font-size:85%; margin-left:10px; text-align:left;">
+      <td style="font-size:85%;margin:0;padding:0;border: 2px solid black;">
       <strong style="text-center">Disha Chauhan</strong>
-      <p style="padding:0; margin:0;">Disha proficiently handled project logistics and contributed in app and web developement.</p></div>
+      <p style="margin-left:10px; text-align:left;padding:0; margin:0;">Disha proficiently handled project logistics and contributed in app and web developement.</p>
       </td>
     </tr>
   </tbody>

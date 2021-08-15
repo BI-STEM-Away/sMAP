@@ -1,4 +1,4 @@
-<h5 style="text-align:center"> Contributions </h5>
+<h5 style="text-align:center; margin-top:0; margin-bottom:15px;"> Contributions </h5>
 
 <table>
   <tbody>

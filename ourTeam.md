@@ -7,7 +7,7 @@
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(15%);" 
       width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
-      src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
+      src="https://bi-stem-away.github.io/sMAP/images/Disha.jpeg">
       </td>
       <td style="font-size:85%;padding:5px;">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">Samuel Bharti</h6>
@@ -30,7 +30,7 @@
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(15%);" 
       width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
-      src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
+      src="https://bi-stem-away.github.io/sMAP/images/Disha.jpeg">
       </td>
       <td style="font-size:85%;padding:5px;">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">Disha Chauhan</h6>
@@ -53,7 +53,7 @@
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(15%);" 
       width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
-      src="https://bi-stem-away.github.io/shiny_app_dev/images/Nikitak.jpeg">
+      src="https://bi-stem-away.github.io/sMAP/images/Nikitak.jpeg">
       </td>
       <td style="font-size:85%;padding:5px;">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
@@ -77,7 +77,7 @@
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(15%);" 
       width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
-      src="https://bi-stem-away.github.io/shiny_app_dev/images/Arian_Veyssi_.png">
+      src="https://bi-stem-away.github.io/sMAP/images/Arian_Veyssi_.png">
       </td>
       <td style="font-size:85%;padding:5px;">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
@@ -101,7 +101,7 @@
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(15%);" 
       width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
-      src="https://bi-stem-away.github.io/shiny_app_dev/images/Roman.jpeg">
+      src="https://bi-stem-away.github.io/sMAP/images/Roman.jpeg">
       </td>
       <td style="font-size:85%;padding:5px;">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
@@ -125,7 +125,7 @@
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(15%);" 
       width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
-      src="https://bi-stem-away.github.io/shiny_app_dev/images/Aditi_Verma.jpg">
+      src="https://bi-stem-away.github.io/sMAP/images/Aditi_Verma.jpg">
       </td>
       <td style="font-size:85%;padding:5px;">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
@@ -149,7 +149,7 @@
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(15%);" 
       width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
-      src="https://bi-stem-away.github.io/shiny_app_dev/images/Kelly.jpg">
+      src="https://bi-stem-away.github.io/sMAP/images/Kelly.jpg">
       </td>
       <td style="font-size:85%;padding:5px;">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
@@ -173,7 +173,7 @@
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(15%);" 
       width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
-      src="https://bi-stem-away.github.io/shiny_app_dev/images/Shreya.jpg">
+      src="https://bi-stem-away.github.io/sMAP/images/Shreya.jpg">
       </td>
       <td style="font-size:85%;padding:5px;">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
@@ -197,7 +197,7 @@
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(15%);" 
       width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
-      src="https://bi-stem-away.github.io/shiny_app_dev/images/Ivan_Lam.png">
+      src="https://bi-stem-away.github.io/sMAP/images/Ivan_Lam.png">
       </td>
       <td style="font-size:85%;padding:5px;">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
@@ -221,7 +221,7 @@
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(15%);" 
       width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
-      src="https://bi-stem-away.github.io/shiny_app_dev/images/IMG_9040_copy.jpg">
+      src="https://bi-stem-away.github.io/sMAP/images/IMG_9040_copy.jpg">
       </td>
       <td style="font-size:85%;padding:5px;">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
@@ -245,7 +245,7 @@
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(15%);" 
       width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
-      src="https://bi-stem-away.github.io/shiny_app_dev/images/Maryam.jpg">
+      src="https://bi-stem-away.github.io/sMAP/images/Maryam.jpg">
       </td>
       <td style="font-size:85%;padding:5px;">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
@@ -269,7 +269,7 @@
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(15%);" 
       width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
-      src="https://bi-stem-away.github.io/shiny_app_dev/images/Modupe.jpg">
+      src="https://bi-stem-away.github.io/sMAP/images/Modupe.jpg">
       </td>
       <td style="font-size:85%;padding:5px;">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">

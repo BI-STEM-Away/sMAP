@@ -28,41 +28,35 @@ feature_text: |
   <tbody>
     <tr>
       <!-- Names -->
-      <td><img height="150" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
-      </td>
-      <td style="text-align:left">
+      <td style="text-align:center"><img height="150" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
       <br>Disha Chauhan<br>
-      <p>Disha proficiently handled project logistics and contributed in app and web developement.</p>
+      <p style="text-align:left">Disha proficiently handled project logistics and contributed in app and web developement.</p>
       </td>
-      </tr>
-      <tr>
-      <td>
+      <td style="text-align:center">
       <img height="150" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
-      </td>
-      <td style="text-align:left">
       <br>Disha Chauhan<br>
-      <p>Disha proficiently handled project logistics and contributed in app and web developement.</p>
+      <p style="text-align:left">Disha proficiently handled project logistics and contributed in app and web developement.</p>
       </td>
     </tr>
   </tbody>
 </table>
-
-<br> 
-| | | |
-|:---------------------------:|----|------------------------------------------------------|
-|<img height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg"> |    | Name: Disha <br> Education Background: High School <br> Contributions: Teams Lead, Management, Backend App Developer, Web-design|
-
 <br>
 <table>
   <tbody>
     <tr>
       <!-- Names -->
-      <td style="text-align:center"><img height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
+      <td style="text-align:center">
+      <img height="150" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
       <br>Disha Chauhan<br>
       <p>Disha proficiently handled project logistics and contributed in app and web developement.</p>
       </td>
       <td style="text-align:center">
-      <img height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
+      <img height="150" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
+      <br>Disha Chauhan<br>
+      <p style="text-align:left">Disha proficiently handled project logistics and contributed in app and web developement.</p>
+      </td>
+      <td style="text-align:center">
+      <img height="150" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
       <br>Disha Chauhan<br>
       <p style="text-align:left">Disha proficiently handled project logistics and contributed in app and web developement.</p>
       </td>
@@ -70,10 +64,6 @@ feature_text: |
   </tbody>
 </table>
 
-
-| | | |
-|:---------------------------:|----|------------------------------------------------------|
-| |    | <p>  </p>|
 
 
 | | | |

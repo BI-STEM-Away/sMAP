@@ -7,7 +7,7 @@ feature_text: |
 
 <table>
   <tbody>
-    <tr style="padding:5px">
+    <tr >
       <!-- Names -->
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(100%);" 
@@ -25,7 +25,7 @@ feature_text: |
       GitHub</a></p>
       </td>
     </tr>
-    <tr style="padding:5px">
+    <tr >
       <!-- Names -->
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(100%);" 
@@ -48,7 +48,7 @@ feature_text: |
 
 <table>
   <tbody>
-    <tr style="padding:5px">
+    <tr >
       <!-- Names -->
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(100%);" 
@@ -72,7 +72,7 @@ feature_text: |
 <br>
 <table>
   <tbody>
-    <tr style="padding:5px">
+    <tr >
       <!-- Names -->
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(100%);" 
@@ -96,7 +96,7 @@ feature_text: |
 
 <table>
   <tbody>
-    <tr style="padding:5px">
+    <tr >
       <!-- Names -->
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(100%);" 
@@ -120,7 +120,7 @@ feature_text: |
 <br>
 <table>
   <tbody>
-    <tr style="padding:5px">
+    <tr >
       <!-- Names -->
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(100%);" 
@@ -144,7 +144,7 @@ feature_text: |
 <br>
 <table>
   <tbody>
-    <tr style="padding:5px">
+    <tr >
       <!-- Names -->
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(100%);" 
@@ -168,7 +168,7 @@ feature_text: |
 <br>
 <table>
   <tbody>
-    <tr style="padding:5px">
+    <tr >
       <!-- Names -->
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(100%);" 
@@ -192,7 +192,7 @@ feature_text: |
 <br>
 <table>
   <tbody>
-    <tr style="padding:5px">
+    <tr >
       <!-- Names -->
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(100%);" 
@@ -216,7 +216,7 @@ feature_text: |
 <br>
 <table>
   <tbody>
-    <tr style="padding:5px">
+    <tr >
       <!-- Names -->
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(100%);" 
@@ -240,7 +240,7 @@ feature_text: |
 <br>
 <table>
   <tbody>
-    <tr style="padding:5px">
+    <tr >
       <!-- Names -->
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(100%);" 
@@ -264,7 +264,7 @@ feature_text: |
 <br>
 <table>
   <tbody>
-    <tr style="padding:5px">
+    <tr >
       <!-- Names -->
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(100%);" 

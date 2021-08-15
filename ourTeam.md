@@ -35,7 +35,7 @@ feature_text: |
       <td >
       <div style="font-size:85%; margin-left:10px; text-align:left;">
       <strong>Disha Chauhan</strong>
-      <p>Disha proficiently handled project logistics and contributed in app and web developement.</p></div>
+      <p style="padding:0; margin:0;">Disha proficiently handled project logistics and contributed in app and web developement.</p></div>
       </td>
     </tr>
   </tbody>

@@ -62,24 +62,24 @@ feature_text: |
 
 
 
-<table>
+<table style="border: 1px solid black;">
   <tbody>
     <tr>
       <!-- Names -->
-      <td style="text-align:center; margin-right:4px; padding:1px">
+      <td style="border: 1px solid black; text-align:center; margin-right:4px; padding:1px">
       <img height="150" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
-      <br>Disha Chauhan<br>
-      <p>Disha proficiently handled project logistics and contributed in app and web developement.</p>
+      <br><strong>Disha Chauhan</strong><br>
+      <p style="text-align:left; font-size:85%;">Disha proficiently handled project logistics and contributed in app and web developement.</p>
       </td>
-      <td style="text-align:center; margin-right:4px; padding:1px">
+      <td style="border: 1px solid black; text-align:center; margin-right:4px; padding:1px">
       <img height="150" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
-      <br>Disha Chauhan<br>
-      <p style="text-align:left">Disha proficiently handled project logistics and contributed in app and web developement.</p>
+      <br><strong>Disha Chauhan</strong><br>
+      <p style="text-align:left; font-size:85%;">Disha proficiently handled project logistics and contributed in app and web developement.</p>
       </td>
-      <td style="text-align:center padding:1px">
+      <td style="border: 1px solid black; text-align:center padding:1px">
       <img height="150" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
-      <br>Disha Chauhan<br>
-      <p style="text-align:left">Disha proficiently handled project logistics and contributed in app and web developement.</p>
+      <br><strong>Disha Chauhan</strong><br>
+      <p style="text-align:left; font-size:85%;">Disha proficiently handled project logistics and contributed in app and web developement.</p>
       </td>
     </tr>
   </tbody>

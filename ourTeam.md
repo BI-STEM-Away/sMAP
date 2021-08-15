@@ -35,8 +35,8 @@ feature_text: |
       </td>
       <td style="font-size:85%;padding:5px;">
       <p style="margin-left:10px; text-align:left;padding:0;">
-      <strong>Disha Chauhan</strong><br>
-      Disha proficiently handled project logistics and contributed in app and web developement.
+      <span style="font-size:95%;"><strong>Disha Chauhan</strong></span><br>
+      Disha proficiently handled project logistics and contributed in app and web developement.<br>
       Socials:
       <a href="mailto:samuelbharti@gmail.com">Email</a>
       <a target='_blank' href="https://www.linkedin.com/in/samuelbharti/">LinkedIn</a>

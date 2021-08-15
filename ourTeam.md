@@ -39,8 +39,8 @@ feature_text: |
       <a href="mailto:samuelbharti@gmail.com">Email</a>
       <a target='_blank' href="https://www.linkedin.com/in/samuelbharti/">LinkedIn</a>
       <a target='_blank' href="https://www.researchgate.net/profile/">
-      GitHub</a>
-      </td></p>
+      GitHub</a></p>
+      </td>
     </tr>
   </tbody>
 </table>

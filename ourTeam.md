@@ -5,8 +5,8 @@
     <tr >
       <!-- Names -->
       <td style="margin-bottom:0;">
-      <img style="border: 2px solid black;  filter: grayscale(75%);" 
-      height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      <img style="border: 2px solid black;  filter: grayscale(15%);" 
+      width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
       </td>
       <td style="font-size:85%;padding:5px;">
@@ -28,8 +28,8 @@
     <tr >
       <!-- Names -->
       <td style="margin-bottom:0;">
-      <img style="border: 2px solid black;  filter: grayscale(75%);" 
-      height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      <img style="border: 2px solid black;  filter: grayscale(15%);" 
+      width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
       </td>
       <td style="font-size:85%;padding:5px;">
@@ -51,8 +51,8 @@
     <tr >
       <!-- Names -->
       <td style="margin-bottom:0;">
-      <img style="border: 2px solid black;  filter: grayscale(75%);" 
-      height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      <img style="border: 2px solid black;  filter: grayscale(15%);" 
+      width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/shiny_app_dev/images/Nikitak.jpeg">
       </td>
       <td style="font-size:85%;padding:5px;">
@@ -75,8 +75,8 @@
     <tr >
       <!-- Names -->
       <td style="margin-bottom:0;">
-      <img style="border: 2px solid black;  filter: grayscale(75%);" 
-      height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      <img style="border: 2px solid black;  filter: grayscale(15%);" 
+      width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/shiny_app_dev/images/Arian_Veyssi_.png">
       </td>
       <td style="font-size:85%;padding:5px;">
@@ -99,8 +99,8 @@
     <tr >
       <!-- Names -->
       <td style="margin-bottom:0;">
-      <img style="border: 2px solid black;  filter: grayscale(75%);" 
-      height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      <img style="border: 2px solid black;  filter: grayscale(15%);" 
+      width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/shiny_app_dev/images/Roman.jpeg">
       </td>
       <td style="font-size:85%;padding:5px;">
@@ -123,8 +123,8 @@
     <tr >
       <!-- Names -->
       <td style="margin-bottom:0;">
-      <img style="border: 2px solid black;  filter: grayscale(75%);" 
-      height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      <img style="border: 2px solid black;  filter: grayscale(15%);" 
+      width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/shiny_app_dev/images/Aditi_Verma.jpg">
       </td>
       <td style="font-size:85%;padding:5px;">
@@ -147,8 +147,8 @@
     <tr >
       <!-- Names -->
       <td style="margin-bottom:0;">
-      <img style="border: 2px solid black;  filter: grayscale(75%);" 
-      height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      <img style="border: 2px solid black;  filter: grayscale(15%);" 
+      width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/shiny_app_dev/images/Kelly.jpg">
       </td>
       <td style="font-size:85%;padding:5px;">
@@ -171,8 +171,8 @@
     <tr >
       <!-- Names -->
       <td style="margin-bottom:0;">
-      <img style="border: 2px solid black;  filter: grayscale(75%);" 
-      height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      <img style="border: 2px solid black;  filter: grayscale(15%);" 
+      width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/shiny_app_dev/images/Shreya.jpg">
       </td>
       <td style="font-size:85%;padding:5px;">
@@ -195,8 +195,8 @@
     <tr >
       <!-- Names -->
       <td style="margin-bottom:0;">
-      <img style="border: 2px solid black;  filter: grayscale(75%);" 
-      height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      <img style="border: 2px solid black;  filter: grayscale(15%);" 
+      width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/shiny_app_dev/images/Ivan_Lam.png">
       </td>
       <td style="font-size:85%;padding:5px;">
@@ -219,8 +219,8 @@
     <tr >
       <!-- Names -->
       <td style="margin-bottom:0;">
-      <img style="border: 2px solid black;  filter: grayscale(75%);" 
-      height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      <img style="border: 2px solid black;  filter: grayscale(15%);" 
+      width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/shiny_app_dev/images/IMG_9040_copy.jpg">
       </td>
       <td style="font-size:85%;padding:5px;">
@@ -243,8 +243,8 @@
     <tr >
       <!-- Names -->
       <td style="margin-bottom:0;">
-      <img style="border: 2px solid black;  filter: grayscale(75%);" 
-      height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      <img style="border: 2px solid black;  filter: grayscale(15%);" 
+      width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/shiny_app_dev/images/Maryam.jpg">
       </td>
       <td style="font-size:85%;padding:5px;">
@@ -267,8 +267,8 @@
     <tr >
       <!-- Names -->
       <td style="margin-bottom:0;">
-      <img style="border: 2px solid black;  filter: grayscale(75%);" 
-      height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      <img style="border: 2px solid black;  filter: grayscale(15%);" 
+      width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/shiny_app_dev/images/M.png">
       </td>
       <td style="font-size:85%;padding:5px;">

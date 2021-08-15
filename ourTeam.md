@@ -26,13 +26,13 @@ feature_text: |
 
 <table style="border: 1px solid black;">
   <tbody>
-    <tr>
+    <tr style="border: 1px solid black;">
       <!-- Names -->
-      <td style="text-align:center; margin-right:4px; padding:1px"><img height="150" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
+      <td style="border: 1px solid black; text-align:center; margin-right:10px; padding:1px"><img height="150" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
       </td>
-      <td style="text-align:left; padding:1px; margin-right:4px;">
-      <p>Disha Chauhan<br>
-       Disha proficiently handled project logistics and contributed in app and web developement.</p>
+      <td style="border: 1px solid black; text-align:left; padding:1px; margin-right:4px;">
+      Disha Chauhan<br>
+      <p> Disha proficiently handled project logistics and contributed in app and web developement.</p>
       </td>
     </tr>
   </tbody>

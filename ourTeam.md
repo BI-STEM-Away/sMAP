@@ -9,7 +9,7 @@
       height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/Disha.jpeg">
       </td>
-      <td style="font-size:85%;padding:5px;">
+      <td style="font-size:85%;padding:5px;max-width:300px">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">Samuel Bharti</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
       Samuel designed the project plans, everything from techinical to logistics and directly contributed in sMAP User Interface Developement. He also supervised overall developement of sMAP's app, project site and documentation.<br>
@@ -32,7 +32,7 @@
       height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/Disha.jpeg">
       </td>
-      <td style="font-size:85%;padding:5px;">
+      <td style="font-size:85%;padding:5px;max-width:300px">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">Disha Chauhan</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
       Disha proficiently managed project logistics throughout the developement period. She also contributed in sMAP's backend code and project site developement. She did all this while still being at High School!<br>
@@ -55,7 +55,7 @@
       height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/Nikitak.jpeg">
       </td>
-      <td style="font-size:85%;padding:5px;">
+      <td style="font-size:85%;padding:5px;max-width:300px">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
       Nikita Krishnan	</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
@@ -79,7 +79,7 @@
       height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/Arian_Veyssi_.png">
       </td>
-      <td style="font-size:85%;padding:5px;">
+      <td style="font-size:85%;padding:5px;max-width:300px">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
       Arian Veyssi</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
@@ -103,7 +103,7 @@
       height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/Roman.jpeg">
       </td>
-      <td style="font-size:85%;padding:5px;">
+      <td style="font-size:85%;padding:5px;max-width:300px">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
       Roman Ramirez</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
@@ -127,7 +127,7 @@
       height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/Aditi_Verma.jpg">
       </td>
-      <td style="font-size:85%;padding:5px;">
+      <td style="font-size:85%;padding:5px;max-width:300px">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
       Aditi Verma</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
@@ -151,7 +151,7 @@
       height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/Kelly.jpg">
       </td>
-      <td style="font-size:85%;padding:5px;">
+      <td style="font-size:85%;padding:5px;max-width:300px">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
       Huikun Li</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
@@ -175,7 +175,7 @@
       height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/Shreya.jpg">
       </td>
-      <td style="font-size:85%;padding:5px;">
+      <td style="font-size:85%;padding:5px;max-width:300px">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
       Shreya Vora</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
@@ -199,7 +199,7 @@
       height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/Ivan_Lam.png">
       </td>
-      <td style="font-size:85%;padding:5px;">
+      <td style="font-size:85%;padding:5px;max-width:300px">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
       Ivan Lam</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
@@ -223,7 +223,7 @@
       height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/IMG_9040_copy.jpg">
       </td>
-      <td style="font-size:85%;padding:5px; width:250px !important">
+      <td style="font-size:85%;padding:5px; max-width:300px">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
       Sneha Raj</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
@@ -247,7 +247,7 @@
       height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/Maryam.jpg">
       </td>
-      <td style="font-size:85%;padding:5px;max-width:250px">
+      <td style="font-size:85%;padding:5px;max-width:300px">
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
       Maryam Momeni</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
@@ -271,7 +271,7 @@
       height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/Modupe.jpg">
       </td>
-      <td style="font-size:85%;padding:5px; max-width:70%" >
+      <td style="font-size:85%;padding:5px; max-width:300px" >
       <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">
       Modupe Arotiba</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">

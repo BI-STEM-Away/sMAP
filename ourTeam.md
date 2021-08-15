@@ -6,7 +6,7 @@
       <!-- Names -->
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(15%);" 
-      width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/Disha.jpeg">
       </td>
       <td style="font-size:85%;padding:5px;">
@@ -29,7 +29,7 @@
       <!-- Names -->
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(15%);" 
-      width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/Disha.jpeg">
       </td>
       <td style="font-size:85%;padding:5px;">
@@ -52,7 +52,7 @@
       <!-- Names -->
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(15%);" 
-      width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/Nikitak.jpeg">
       </td>
       <td style="font-size:85%;padding:5px;">
@@ -76,7 +76,7 @@
       <!-- Names -->
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(15%);" 
-      width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/Arian_Veyssi_.png">
       </td>
       <td style="font-size:85%;padding:5px;">
@@ -100,7 +100,7 @@
       <!-- Names -->
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(15%);" 
-      width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/Roman.jpeg">
       </td>
       <td style="font-size:85%;padding:5px;">
@@ -124,7 +124,7 @@
       <!-- Names -->
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(15%);" 
-      width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/Aditi_Verma.jpg">
       </td>
       <td style="font-size:85%;padding:5px;">
@@ -148,7 +148,7 @@
       <!-- Names -->
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(15%);" 
-      width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/Kelly.jpg">
       </td>
       <td style="font-size:85%;padding:5px;">
@@ -172,7 +172,7 @@
       <!-- Names -->
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(15%);" 
-      width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/Shreya.jpg">
       </td>
       <td style="font-size:85%;padding:5px;">
@@ -196,7 +196,7 @@
       <!-- Names -->
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(15%);" 
-      width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/Ivan_Lam.png">
       </td>
       <td style="font-size:85%;padding:5px;">
@@ -220,7 +220,7 @@
       <!-- Names -->
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(15%);" 
-      width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/IMG_9040_copy.jpg">
       </td>
       <td style="font-size:85%;padding:5px;">
@@ -244,7 +244,7 @@
       <!-- Names -->
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(15%);" 
-      width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/Maryam.jpg">
       </td>
       <td style="font-size:85%;padding:5px;">
@@ -268,7 +268,7 @@
       <!-- Names -->
       <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(15%);" 
-      width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/Modupe.jpg">
       </td>
       <td style="font-size:85%;padding:5px;">

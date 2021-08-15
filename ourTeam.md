@@ -1,4 +1,4 @@
-##### Contributions:
+<h5 style="text-align:center"> Contributions </h5>
 
 <table>
   <tbody>
@@ -25,7 +25,6 @@
 
 <table>
   <tbody>
-    <tr >
     <tr >
       <!-- Names -->
       <td style="margin-bottom:0;">

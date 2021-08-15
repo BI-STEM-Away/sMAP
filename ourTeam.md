@@ -33,7 +33,7 @@ feature_text: |
       src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
       </td>
       <td style="border: 1px solid black;">
-      <p style=" padding:1px; margin-left:4px; text-align:left;"><strong>Disha Chauhan<strong><br>
+      <p style=" padding:1px; margin-left:4px; text-align:left;"><strong>Disha Chauhan</strong><br>
        Disha proficiently handled project logistics and contributed in app and web developement.</p>
       </td>
     </tr>

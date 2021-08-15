@@ -7,7 +7,7 @@ $accentColour: #05bf85 !default;
 // Text colours
 $headingColour: #242e2b !default;
 $bodyColour: #384743 !default;
-$linkColour: #557658  !default;
+$linkColour: #557658 !default;
 $hoverColour: #008000 !default;
 $focusColour: #fa407a !default;
 $captionColour: #a8adac !default;
@@ -15,24 +15,24 @@ $white: #ffffff !default;
 
 // Typography
 $bodytype: (
-  font-family: "Montserrat sans-serif",
+  font-family: "Nunito+Sans sans-serif",
   regular: 400,
   bold: 700,
   italic: italic,
-  cap-height: 0.65
+  cap-height: 0.65,
 ) !default;
 
 $headingtype: (
-  font-family: 'Montserrat sans-serif',
+  font-family: "Montserrat sans-serif",
   regular: 400,
   bold: 700,
-  cap-height: 0.65
+  cap-height: 0.65,
 ) !default;
 
 $monospacetype: (
-  font-family: "Montserrat sans-serif",
+  font-family: "Nunito+Sans, monospace",
   regular: 400,
-  cap-height: 0.58
+  cap-height: 0.58,
 ) !default;
 
 // TIP: Load custom fonts in _config.yaml

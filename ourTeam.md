@@ -28,12 +28,12 @@ feature_text: |
   <tbody>
     <tr style="padding:5px">
       <!-- Names -->
-      <td style="text-align:center;margin-bottom:0;text-align:center;">
+      <td style="margin-bottom:0;">
       <img style="border: 2px solid black;  filter: grayscale(100%);" height="220" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
       </td>
       <td style="font-size:85%;padding:5px;">
-      <strong style="text-align:center">Disha Chauhan</strong>
+      <strong style="">Disha Chauhan</strong>
       <p style="margin-left:10px; text-align:left;padding:0; margin:0;">Disha proficiently handled project logistics and contributed in app and web developement.</p>
       </td>
     </tr>

@@ -29,7 +29,7 @@ feature_text: |
     <tr style="border: 2px solid black; padding:5px">
       <!-- Names -->
       <td style="text-align:center;">
-      <img style="border: 2px solid black;" height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      <img style="border: 2px solid black;" height="220" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
       </td>
       <td >

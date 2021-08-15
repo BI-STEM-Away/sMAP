@@ -33,9 +33,10 @@ feature_text: |
       height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
       </td>
-      <td style="font-size:85%;padding:5px;">
-      <p style="margin-left:10px; text-align:left;padding:0;">
-      <span style="font-size:95%;"><strong>Disha Chauhan</strong></span><br>
+      <td style="padding:5px;">
+      <p style="font-size:95%; margin-left:10px; text-align:left;padding:0;">
+      <strong>Disha Chauhan</strong></p>
+      <p style="font-size:85%;margin-left:10px; text-align:left;padding:0;">
       Disha proficiently handled project logistics and contributed in app and web developement.<br>
       Socials:
       <a href="mailto:samuelbharti@gmail.com">Email</a>

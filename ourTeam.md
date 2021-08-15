@@ -29,13 +29,14 @@ feature_text: |
     <tr style="padding:5px">
       <!-- Names -->
       <td style="margin-bottom:0;">
-      <img style="border: 2px solid black;  filter: grayscale(100%);" height="220" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      <img style="border: 2px solid black;  filter: grayscale(100%);" 
+      height="200" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
       </td>
       <td style="font-size:85%;padding:5px;">
-      <strong style="">Disha Chauhan</strong>
-      <p style="margin-left:10px; text-align:left;padding:0; margin:0;">Disha proficiently handled project logistics and contributed in app and web developement.</p>
-      <p style="margin-left:10px; text-align:left;padding:0; margin:0;">My socials:
+      <p><strong>Disha Chauhan</strong></p>
+      <p style="margin-left:10px; text-align:left;padding:0;">Disha proficiently handled project logistics and contributed in app and web developement.</p>
+      <p style="margin-left:10px; text-align:left;padding:0;">My socials:
       <a href="mailto:samuelbharti@gmail.com">Email</a>
       <a target='_blank' href="https://www.linkedin.com/in/samuelbharti/">LinkedIn</a>
       <a target='_blank' href="https://www.researchgate.net/profile/">

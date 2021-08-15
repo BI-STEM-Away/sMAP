@@ -34,7 +34,7 @@ feature_text: |
       src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
       </td>
       <td style="font-size:85%;padding:5px;">
-      <h6 class="h4" style="margin-left:10px; text-align:left;margin-bottom:10px;">Disha Chauhan</h6>
+      <h6 style="margin-left:10px; text-align:left;margin-bottom:10px;">Disha Chauhan</h6>
       <p style="margin-left:10px; text-align:left;padding:0;">
       Disha proficiently handled project logistics and contributed in app and web developement.<br>
       Socials:

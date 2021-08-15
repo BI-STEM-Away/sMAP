@@ -34,9 +34,10 @@ feature_text: |
       src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
       </td>
       <td style="font-size:85%;padding:5px;">
-      <p><strong>Disha Chauhan</strong></p>
-      <p style="margin-left:10px; text-align:left;padding:0;">Disha proficiently handled project logistics and contributed in app and web developement.</p>
-      <p style="margin-left:10px; text-align:left;padding:0;">My socials:
+      <p style="margin-left:10px; text-align:left;padding:0;">
+      <strong>Disha Chauhan</strong><br>
+      Disha proficiently handled project logistics and contributed in app and web developement.
+      Socials:
       <a href="mailto:samuelbharti@gmail.com">Email</a>
       <a target='_blank' href="https://www.linkedin.com/in/samuelbharti/">LinkedIn</a>
       <a target='_blank' href="https://www.researchgate.net/profile/">

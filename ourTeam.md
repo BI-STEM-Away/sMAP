@@ -35,6 +35,10 @@ feature_text: |
       <td style="font-size:85%;padding:5px;">
       <strong style="">Disha Chauhan</strong>
       <p style="margin-left:10px; text-align:left;padding:0; margin:0;">Disha proficiently handled project logistics and contributed in app and web developement.</p>
+      <a href="mailto:samuelbharti@gmail.com" class = "email mr-2"><i class="fas fa-envelope-square fa-md"></i></a>
+      <a target='_blank' href="https://www.linkedin.com/in/samuelbharti/" class= "linkedin mr-2"><i class="fab fa-linkedin fa-md"></i></a>
+      <a target='_blank' href="https://www.researchgate.net/profile/Samuel_Bharti" class= "researchgate mr-2"><i class="fab fa-researchgate"></i></a>
+      <a target='_blank' href="http://samuelbharti.com" class= "weblink "><i class="fas fa-laptop-house"></i></a>
       </td>
     </tr>
   </tbody>

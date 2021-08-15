@@ -29,10 +29,11 @@ feature_text: |
     <tr style="border: 1px solid black;">
       <!-- Names -->
       <td style="text-align:center; padding:1px">
-      <img height="180" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
+      <img height="180" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg">
       </td>
-      <td style="border: 1px solid black; text-align:left; padding:1px; margin-left:5px;">
-      <strong>Disha Chauhan<strong><hr><br>
+      <td style="border: 1px solid black; text-align:left; padding:1px; margin-left:4px;">
+      <strong>Disha Chauhan<strong><br>
       <p> Disha proficiently handled project logistics and contributed in app and web developement.</p>
       </td>
     </tr>

@@ -35,10 +35,10 @@ feature_text: |
       <td style="font-size:85%;padding:5px;">
       <strong style="">Disha Chauhan</strong>
       <p style="margin-left:10px; text-align:left;padding:0; margin:0;">Disha proficiently handled project logistics and contributed in app and web developement.</p>
-      <a href="mailto:samuelbharti@gmail.com" class = "email mr-2"><i class="fas fa-envelope-square fa-md"></i></a>
-      <a target='_blank' href="https://www.linkedin.com/in/samuelbharti/" class= "linkedin mr-2"><i class="fab fa-linkedin fa-md"></i></a>
-      <a target='_blank' href="https://www.researchgate.net/profile/Samuel_Bharti" class= "researchgate mr-2"><i class="fab fa-researchgate"></i></a>
-      <a target='_blank' href="http://samuelbharti.com" class= "weblink "><i class="fas fa-laptop-house"></i></a>
+      <p>My socials:</p>
+      <a href="mailto:samuelbharti@gmail.com" class = "email mr-2"><i class="fas fa-envelope-square fa-md"></i>Email</a>
+      <a target='_blank' href="https://www.linkedin.com/in/samuelbharti/" class= "linkedin mr-2"><i class="fab fa-linkedin fa-md"></i>LinkedIn</a>
+      <a target='_blank' href="https://www.researchgate.net/profile/Samuel_Bharti" class= "researchgate mr-2"><i class="fab fa-researchgate"></i>GitHub</a>
       </td>
     </tr>
   </tbody>
@@ -90,10 +90,11 @@ feature_text: |
 </table>
 
 
-
+<!-- 
 |                                                                                                                                                                                                                                                   |                                                                                                                                                                                                                            |                                                                                                                                                                                                                                          |
 | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | <img height="150" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Disha.jpeg"> <br> Disha <p> Disha proficiently handled project logistics and contributed in app and web developement. </p> | <img  height="150" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Nikitak.jpeg"> <br> Nikita <br> Nikita worked on developing backend of sMAP and feature additions. | <img height="150" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Shreya.jpg"> <br> Shreya <br> Shreya contributed in backend developement and helped in documentation compilation. |
 |                                         <img height="150" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Roman.jpeg"> <br> Roman <br> Group Manager                                         |                         <img  height="150" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Arian_Veyssi_.png"> <br> Arian <br> Group Manager                          |                                  <img height="150" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Aditi_Verma.jpg"> <br> Aditi <br> Group Manager                                  |
 |                                         <img height="150" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Kelly.jpg"> <br> Kelly <br> Group Manager                                          |                                      <img  height="150" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Ivan_Lam.png"> <br> Ivan                                      |                                             <img height="150" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Maryam.jpg"> <br> Maryam                                              |
 |                                            <img  height="150" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/IMG_9040_copy.jpg"> <br> Sneha Raj                                             |                                        <img  height="150" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/M.png"> <br> Modupe                                         |                                          <img height="150" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://bi-stem-away.github.io/shiny_app_dev/images/Marc_Abdallah.jpeg"> <br> Marc                                           |
+ -->

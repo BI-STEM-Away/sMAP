@@ -35,11 +35,12 @@ feature_text: |
       <td style="font-size:85%;padding:5px;">
       <strong style="">Disha Chauhan</strong>
       <p style="margin-left:10px; text-align:left;padding:0; margin:0;">Disha proficiently handled project logistics and contributed in app and web developement.</p>
-      <p>My socials:</p>
-      <a href="mailto:samuelbharti@gmail.com" class = "email mr-2"><i class="fas fa-envelope-square fa-md"></i>Email</a>
-      <a target='_blank' href="https://www.linkedin.com/in/samuelbharti/" class= "linkedin mr-2"><i class="fab fa-linkedin fa-md"></i>LinkedIn</a>
-      <a target='_blank' href="https://www.researchgate.net/profile/Samuel_Bharti" class= "researchgate mr-2"><i class="fab fa-researchgate"></i>GitHub</a>
-      </td>
+      <p style="margin-left:10px; text-align:left;padding:0; margin:0;">My socials:
+      <a href="mailto:samuelbharti@gmail.com">Email</a>
+      <a target='_blank' href="https://www.linkedin.com/in/samuelbharti/">LinkedIn</a>
+      <a target='_blank' href="https://www.researchgate.net/profile/">
+      GitHub</a>
+      </td></p>
     </tr>
   </tbody>
 </table>

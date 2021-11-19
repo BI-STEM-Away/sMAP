@@ -1,38 +1,22 @@
-# Load the libraries and import function files here.
-# Global.R is run one time at app initiallization. 
-library(bs4Dash)
-library(shiny)
-library(shinybusy)
-library(fresh)
-
-library(oligo)
-library(GEOquery)
-library(affy)
-library(limma)
-library(arrayQualityMetrics)
-library(sva)
-library(Biobase)
-library(affyPLM)
-library(EnhancedVolcano)
-library(AnnotationDbi)
-library(hgu133plus2.db)
-library(WGCNA)
-library(clusterProfiler)
-library(msigdbr)
-library(impute)
-library(org.Hs.eg.db)
-library(ggplot2)
-library(pheatmap)
-library(shinyWidgets)
-library(DT)
-library(data.table)
-library(magrittr)
-library(tidyr)
-library(enrichplot)
-packages12<-c("stringr","R.utils","shinyWidgets")
+packages12<-c("bs4Dash","shiny","shinybusy","fresh","oligo","GEOquery","affy","limma","arrayQualityMetrics","sva","Biobase","affyPLM","EnhancedVolcano","AnnotationDbi","hgu133plus2.db","WGCNA","clusterProfiler","msigdbr","impute","org.Hs.eg.db","ggplot2","shinyWidgets","DT","enrichplot","hugene11sttranscriptcluster.db")
 for(y in packages12){
+#    BiocManager::install(y)
     library(y,character.only=TRUE)
 }
-#Import Functions from External R scripts.
+library(knitr)
+library(Hmisc)
+library(htmltools)
+library(markdown)
+# library(tidyr)
+# library(magrittr)
+# library(stringr)
+# library(R.utils)
 
-source("functions/testFunction.R", local = TRUE)$value
+# Demo File paths
+demo.5Samples.exp <- "www/demoData/5_samples_exp.csv"
+demo.5Samples.meta <- "www/demoData/5_samples_metadata.csv"
+demo.5Samples.cel <- list("www/demoData/GSM494556.CEL.gz",
+                          "www/demoData/GSM494557.CEL.gz",
+                          "www/demoData/GSM494558.CEL.gz",
+                          "www/demoData/GSM494559.CEL.gz",
+                          "www/demoData/GSM494560.CEL.gz")

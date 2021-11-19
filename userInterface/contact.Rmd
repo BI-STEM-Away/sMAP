@@ -1,0 +1,34 @@
+---
+title: "contact"
+output: html_document
+---
+
+
+## Project Technical Lead:
+* Samuel Bharti
+
+## Team Members:
+* Nikita Krishnan
+* Disha Chauhan
+* Arian Veyssi
+* Roman Ramirez
+* Hou Wang (Ivan) Lam
+* Aditi Verma
+* Huikun (Kelly) Li
+
+## Acknowledgement:
+
+All team members thank the [STEM-AWAY](https://stemaway.com/) for providing an excellent internship opportunity with complete technical and management resources which made sMAP possible.  
+
+We would also like to acknowledge interns who shared ideas and discussions that bring us here.
+* Austin (Assisted in Task Management)
+* Marc (Logistic Help)
+* Ananya (Participation in UI discussion)
+
+## How to cite us:
+Updated soon.
+
+## Contact Us
+If you have questions or comments about the sMAP, please email Samuel Bharti, [samuelbharti@gmail.com](mailto:samuelbharti@gmail.com).
+
+Our Git Page: [BI-STEM-Away](https://github.com/BI-STEM-Away)

@@ -7,40 +7,40 @@ source('userInterface/degAnalysis_UI.R')
 source('userInterface/functionalAnalysis_UI.R')
 source('userInterface/faq_UI.R')
 source('userInterface/contact_UI.R')
-options(shiny.maxRequestSize = 10e40)
+options(shiny.maxRequestSize = 1000*1024^2)
 
 sidebar <- dashboardSidebar(
   skin = "light",
   sidebarMenu(id = "tabs",
               menuItem("Introduction", tabName = "introduction", 
                        icon = icon("arrow-right")),
-            #  bs4SidebarHeader("Data Importation"),
+              #  bs4SidebarHeader("Data Importation"),
               menuItem("Upload Data", tabName = "dataImport",
                        icon = icon("upload")),
-         #     bs4SidebarHeader("Quality Control"),
-              menuItem("Quality Control", tabName = "qualityControl", 
+              #     bs4SidebarHeader("Quality Control"),
+              menuItem(tags$div("QC & Preprocessing",style="display: inline-block;vertical-align:middle"), tabName = "qualityControl", 
                        icon = icon("vials"),
-                       menuSubItem("QC", tabName = "qC"),
+                       menuSubItem(text=tags$div("Visualization",tags$br(), "Before Preprocessing",style= "display: inline-block;vertical-align:middle"), tabName = "qC"),
                        menuSubItem("Normalization", tabName = "normalization"),
-                       menuSubItem("Batch Correction", tabName = "batchCorrection"),
+                       menuSubItem(text=tags$div("Batch Correction &",tags$br(),"Visualization",style= "display: inline-block;vertical-align:middle"), tabName = "batchCorrection"),
                        menuSubItem("Potential Outliers", tabName = "potentialOutliers")
               ),
-            #  bs4SidebarHeader("Grouping of Samples"),
+              #  bs4SidebarHeader("Grouping of Samples"),
               menuItem("Sample Grouping", tabName = "sampleGrouping", 
                        icon = icon("object-group")),
-       #       bs4SidebarHeader("Statistical Analysis"),
+              #       bs4SidebarHeader("Statistical Analysis"),
               menuItem("Statistical Analysis", tabName = "degAnalysis", 
                        icon = icon("dna"),
                        menuSubItem("Top DEGs", tabName="topDEGs"),
                        menuSubItem("Volcano Plot", tabName="volcanoPlot")
                        
               ),
-     #         bs4SidebarHeader("Functional Analysis"),
+              #         bs4SidebarHeader("Functional Analysis"),
               menuItem("Functional Analysis", tabName = "functionalAnalysis", 
                        icon = icon("project-diagram"),
-                       menuSubItem("Functional Enrichment", 
+                       menuSubItem("KEGG Pathway Enrichment", 
                                    tabName="functionalEnrichmentAnalysis"),
-                       menuSubItem("Gene-Concept Network", tabName="geneConceptNetwork"),
+                       menuSubItem("Gene Ontology Enrichment", tabName="geneConceptNetwork"),
                        menuSubItem("Gene Set Enrichment", tabName="gsea")
               ),
               bs4SidebarHeader("Help"),
@@ -55,18 +55,18 @@ body <- dashboardBody(
     introductionTab,
     dataImportTab,
     # qualityControlTab,
-      qCTab,
-      normalizationTab,
-      batchCorrectionTab,
-      potentialOutliersTab,
+    qCTab,
+    normalizationTab,
+    batchCorrectionTab,
+    potentialOutliersTab,
     sampleGroupingTab,
     # degAnalysisTab,
-      topDEGsTab,
-      volcanoPlotTab,
+    topDEGsTab,
+    volcanoPlotTab,
     # functionalAnalysisTab,
-      functionalEnrichmentAnalysisTab,
-      geneConceptNetworkTab,
-      gseaTab,
+    functionalEnrichmentAnalysisTab,
+    geneConceptNetworkTab,
+    gseaTab,
     #    docsTab,
     faqTab,
     contactTab
@@ -85,21 +85,6 @@ title <- dashboardBrand(
   opacity = 1,
   href = "https://stemaway.com/",
 )
-
-controlbar <- dashboardControlbar(
-  id = NULL,
-  disable = FALSE,
-  width = 500,
-  collapse = TRUE,
-  skin = "light",
-  controlbarMenu(
-    div(class="typeform-widget", 'data-url' ="https://form.typeform.com/to/GoJ0NzhN?typeform-medium=embed-snippet", style="width: 85%; height: 450px;"),
-    h1("Questions? Feedback?"),
-    p("Please leave us a comment in the link below"),
-    p("Links:"), 
-    a(strong("Typeform"), href = "https://www.typeform.com/", style = "font-size : 25px;")
-
-))
 
 dashboardPage(
   freshTheme = create_theme(
@@ -131,7 +116,6 @@ dashboardPage(
   ),
   sidebar,
   body,
-  controlbar,
   footer = dashboardFooter(
     left = a(
       href = "https://github.com/BI-STEM-Away/",
@@ -141,4 +125,3 @@ dashboardPage(
   ),
   fullscreen = TRUE, dark = NULL
 )
-

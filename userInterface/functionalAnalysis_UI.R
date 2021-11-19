@@ -14,7 +14,7 @@ functionalEnrichmentAnalysisTab <- tabItem(tabName = "functionalEnrichmentAnalys
                                      actionButton('backTo_topDEGs', label = 'Back', status = "success"))
                           ),
                           column(8, align="center",
-                                 HTML("<h5>Functional Enrichment Analysis</h5>")
+                                 HTML("<h5>KEGG Pathway Enrichment Analysis</h5>")
                                  
                           ),
                           # @roman_ramirez
@@ -28,22 +28,25 @@ functionalEnrichmentAnalysisTab <- tabItem(tabName = "functionalEnrichmentAnalys
                       fluidRow(
 #                                downloadButton("exportkegg","Download KEGG Plots")
                          column(12,
-                                actionButton("kegg","KEGG Analysis")
+                                actionButton("kegg","KEGG Analysis"),
+                                p("KEGG is a database that lets you compare your data using the gene symbols
+             to other biological systems, allowing you to determine which biological pathways are associated with your set of enriched genes. You will be able to visualize a dotplot and barplot for which larger dots and longer bars indicate enriched pathways."),
                         )
                         ),
                   HTML("<HR>"),
                   HTML("<BR>"),
                    fluidRow(
                      column(12,
-                            sliderInput("x", "Number of categories shown", 0, 20,
-                                        value =10, step = 2),
+                            numericInput("KEGG_pcut","Cutoff Adjusted p-Value for Enriched KEGG Pathways",value=0.05),
+                            uiOutput("kegg_y"),
+                            uiOutput("cat"),
                             plotOutput("dotplot"))
                    ),
                   HTML("<HR>"),
                    fluidRow(
                    column(12,
-                          sliderInput("y", "Number of categories shown", 0, 20,
-                                      value =10, step = 2),
+                          
+                          
                           plotOutput("barplot"))
                   )
 )
@@ -69,8 +72,10 @@ geneConceptNetworkTab <- tabItem(tabName = "geneConceptNetwork",
               HTML("<BR>"),
               fluidRow(
                column(6,
-                      selectInput("type","Category for Gene Ontology Analysis",choices=c("Cellular Components","Molecular Functions","Biological Processes"))
+                      selectInput("type","Category for Gene Ontology Analysis",choices=c("Cellular Components","Molecular Functions","Biological Processes")),
+                      numericInput("funcpcutGO","Cutoff Adjusted p-Value for Enriched GO Terms",value=0.05)
                       ),
+               
                column(6,
                       actionButton("go","Gene Ontology Analysis")
                )
@@ -79,12 +84,13 @@ geneConceptNetworkTab <- tabItem(tabName = "geneConceptNetwork",
                HTML("<HR>"),
                fluidRow(
                column(12,
-                sliderInput("a", "Number of categories shown", 0, 20, value =10, step = 2),
+                uiOutput("go_a"),
+                p("Gene Ontology defines gene function and the relationship between Cellular Components, Molecular Functions, and Biological Processes with your set of genes. The dot plot and bar plot are two ways of visualizing which gene ontology terms are most enriched, these terms being indicated by larger dots and longer bars."),
                 plotOutput("dotplot2")
                )),
               fluidRow(
                 column(12,
-                       sliderInput("b", "Number of categories shown", 0, 20, value =10, step = 2),
+                       #sliderInput("b", "Number of Terms shown", 0, 20, value =10, step = 2),
                        plotOutput("barplot2")
                )
                     #  plotOutput("GOgraph")
@@ -109,11 +115,14 @@ gseaTab <- tabItem(tabName = "gsea",
             HTML("<HR>"),
             HTML("<BR>"),
             fluidRow(
-             column(12,
+             column(12,offset=0,align="center",
+                    p("GSEA is the evaluation of microarray data in gene sets. The goal of GSEA is to figure 
+                      out how the genes are distributed within the data set. GSEA will first rank all genes in a data set, then it will calculate an enrichment score 
+                      for the genes which show the under and over expressed genes."),
                     actionButton("gsea","Perform GSEA")
              )),
              fluidRow(
-             column(12,
+             column(12,offset=0,align="center",
                     plotOutput("plot_gsea")
 #                    downloadButton("exportgsea","Download GSEA Plot")
              )

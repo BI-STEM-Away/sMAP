@@ -1,14 +1,11 @@
 function(input,output,session){
   
-  # @roman_ramirez
-  # stop app on browser close
-  session$onSessionEnded(
-    function() {
-      stopApp()
-    }
-  )
-  
-  # @samuel_bharti and @roman_ramirez
+  # # stop app on browser close
+  # session$onSessionEnded(
+  #   function() {
+  #     stopApp()
+  #   }
+  # )
   # BACK AND PROCEED BUTTONS
   
   # INTRODUCTION BUTTONS
@@ -140,11 +137,9 @@ function(input,output,session){
   ###DATA IMPORTATION####
   
   #Code for using GEO accession number to import data
-  #nk468188
   geo_data<-reactive({
     if(input$geoname==""){return()}
     #If user wants series matrix data, uses getGEO function
-    #sneha-mr
     else{
       return(getGEO(input$geoname))}
   })
@@ -157,17 +152,29 @@ function(input,output,session){
   
   #metadata input
   meet<-reactive({
+    if(input$dat_type == 'Load 5 Samples Data (Raw)'){
+      return(read.csv(demo.5Samples.meta))
+    }
+    else{
     if(is.null(input$metadata)){
       return(NULL)
     }
     else{
       return(read.csv(input$metadata$datapath))
-    }
+    }}
   })
   
   #Update reactive metadata variable when "Load Data" Button is hit
   observeEvent(input$loaddat,meta_data(meet()))
-  
+  observe({
+    # get all character or factor columns
+    if(input$dat_type == 'Load 5 Samples Data (Raw)'){
+      updateSelectInput(session, "oligo",
+                   choices = list("Affymetrix Human Gene 1.0 ST Array",
+                                 "Affymetrix Human Genome U133 Plus 2.0 Array"), # update choices
+                   selected = "Affymetrix Human Genome U133 Plus 2.0 Array") # remove selection
+    }
+  })
   selections<-reactive({
     if(is.null(meet())){
       return(NULL)
@@ -177,27 +184,33 @@ function(input,output,session){
   
   #Reading in CEL files from tar zipped user upload
   celdat<-reactive({
+    if(input$dat_type == 'Load 5 Samples Data (Raw)'){
+      affy<-ReadAffy(filenames=unlist(demo.5Samples.cel))
+      return(affy)
+    }
+    else{
     if(is.null(input$celzip$datapath)){
       return(NULL)
     }
-    if(input$oligo=="Gene ST Array" || input$oligo=="Exon ST Array"){
+    if(input$oligo=="Affymetrix Human Gene 1.0 ST Array" || input$oligo=="Affymetrix Human Exon 1.0 ST Array"){
       
-      #sneha-mr
       #function to be used if user has chip that requires oligo package
-      return(read.celfiles(untar(input$celzip$datapath,list=TRUE)))
+      return(read.celfiles(input$celzip$datapath))
     }
     
     #if using any other chip, read in using affy package
-    #nk468188 and Modupe001
     else{
-      affy<-ReadAffy(filenames=as.character(untar(input$celzip$datapath,list=TRUE)))
+      affy<-ReadAffy(filenames=unlist(input$celzip$datapath))
       return(affy)
-    }
+    }}
   })
   
-  #ShreyaVora14, referenced code from aagarw30
   #reading in txt and cSV data
   data<-reactive({
+    # if(input$dat_type == 'Load 5 Samples Data (Raw)'){
+    #   return(read.csv(demo.5Samples.exp))
+    # }
+    # else{
     file1<- input$file
     if(is.null(file1)){return()}
     if(grepl("\\.txt$", file1)[1]){
@@ -206,51 +219,56 @@ function(input,output,session){
     else{
       return(read.csv(file = file1$datapath))
     }
+    #}
   })
   
-  #Text outputs to confirm data and metadata are loaded
-  #nk468188
-  # observeEvent(input$loaddat,output$obj<-renderText({
-  #   if(is.null(data()) && is.null(celdat()) && is.null(geo_data())){
-  #     return("Please upload data.")
-  #   }
-  #   else{
-  #     return("Your data has been loaded. See the summary below.")
-  #   }
-  # }))
   
-  #ShreyaVora14, referenced code from aagarw30 
-  observeEvent(input$loaddat,output$csv_summary<-renderDT({
+  
+  observeEvent(input$loaddat,output$csv_summary<-renderDataTable({
     # if(is.null(data()) && is.null(geo_data())){
     #      return() 
     #    }
     # else
     if(is.null(geo_data()) && is.null(data())==FALSE){
 #      print("Printed loc1")
-      datatable(data(),extensions = c('Responsive'), class = 'cell-border stripe',
+      datatable(data(),extensions = c('Responsive','Buttons'), class = 'cell-border stripe',
                 options = list(pageLength = 10,responsive = TRUE))
       
     }
     else if(is.null(data()) && is.null(geo_data())==FALSE){
       gn<-geo_data()
-      #sneha-mr
       as.data.frame(exprs(gn[[1]]))
-      print("Printed loc2")
+      #print("Printed loc2")
     }
   }))
   
-  #nk468188, referenced code form aagarw30
   observeEvent(input$loaddat,output$raw_summary<-renderDT({
     data2<-celdat()
     if(is.null(data2)){
       return(NULL)
     }
     print("Printed loc3")
-    datatable(exprs(data2),extensions = c('Responsive'), class = 'cell-border stripe',
+    expressiondata<-exprs(data2)
+    colnames(expressiondata)<-meet()[,1]
+    datatable(expressiondata,extensions = c('Responsive'), class = 'cell-border stripe',
               options = list(pageLength = 10,responsive = TRUE))
     
     
   }))
+  
+  plot_samplenames<-eventReactive(input$loaddat,{
+    names<-input$celzip$name
+    plotnames<-c()
+    metanames<-meet()[,1]
+    for(hu in names){
+      for(bu in metanames){
+        if(grepl(bu,hu,fixed=TRUE)==TRUE){
+          plotnames<-c(plotnames,bu)
+        }
+      }
+    }
+    metanames
+  })
   
   ####QUALITY CONTROL######
   
@@ -258,42 +276,48 @@ function(input,output,session){
   #Reactive value to store data after normalization and/or batch correction
   final_qc_dat<-reactiveVal()
   
+
+  
   #Normalization of data
-  #disha-22
   observeEvent(input$normlzdata,
                {
-                 if(is.null(celdat())){
+                 if(is.null(celdat()) && is.null(data()) && is.null(geo_data())){
                    final_qc_dat(NULL)
                  }
                  else{
-                   if(input$normlztype=="RMA" && input$oligo=="Other"){
+                   if(input$normlztype=="RMA" && input$oligo=="Affymetrix Human Genome U133 Plus 2.0 Array"){
                      norm_affy<-exprs(affy::rma(celdat()))
+                     colnames(norm_affy)<-plot_samplenames()
                      final_qc_dat(norm_affy)
                      output$norm_comp<-renderText("Normalization is complete.")
                    }
-                   else if(input$normlztype=="GCRMA"  && input$oligo=="Other"){
+                   else if(input$normlztype=="GCRMA"  && input$oligo=="Affymetrix Human Genome U133 Plus 2.0 Array"){
                      norm_affy<-exprs(gcrma(celdat()))
+                     colnames(norm_affy)<-plot_samplenames()
                      final_qc_dat(norm_affy)
                      output$norm_comp<-renderText("Normalization is complete.")
                    }
-                   else if(input$normlztype=="MAS5" && input$oligo=="Other"){
+                   else if(input$normlztype=="MAS5" && input$oligo=="Affymetrix Human Genome U133 Plus 2.0 Array"){
                      norm_affy<-log(exprs(mas5(celdat())),2)
+                     colnames(norm_affy)<-plot_samplenames()
                      final_qc_dat(norm_affy)
                      output$norm_comp<-renderText("Normalization is complete.")
                    }
-                   else if(input$normlztype=="RMA" && (input$oligo=="Gene ST Array" || input$oligo=="Exon ST Array")){
+                   else if(input$normlztype=="RMA" && (input$oligo=="Affymetrix Human Gene 1.0 ST Array" )){
                      norm_affy<-exprs(oligo::rma(celdat()))
+                     colnames(norm_affy)<-plot_samplenames()
                      final_qc_dat(norm_affy)
                      output$norm_comp<-renderText("Normalization is complete.")
                    }
-                   else if(input$normlztype=="GCRMA" && is.null(geo_data()) && (input$oligo=="Gene ST Array" || input$oligo=="Exon ST Array")){
+                   else if(input$normlztype=="GCRMA" && is.null(geo_data()) && (input$oligo=="Affymetrix Human Gene 1.0 ST Array" || input$oligo=="Affymetrix Human Exon 1.0 ST Array")){
                      norm_affy<-NULL
                      final_qc_dat(norm_affy)
                    }
-                   else if(input$normlztype=="MAS5" && is.null(geo_data()) && (input$oligo=="Gene ST Array" || input$oligo=="Exon ST Array")){
+                   else if(input$normlztype=="MAS5" && is.null(geo_data()) && (input$oligo=="Affymetrix Human Gene 1.0 ST Array" || input$oligo=="Affymetrix Human Exon 1.0 ST Array")){
                      norm_affy<-NULL
                      final_qc_dat(norm_affy)
                    }
+                   
                  }
                  
                })
@@ -313,42 +337,100 @@ function(input,output,session){
   
   
   #Visualize data prior to normalization using RLE or NUSE
-  #xgeng3 and nk468188
-  observeEvent(input$vis_dat,output$plot_raw<-renderPlot({
-    if(input$qc_method=="RLE" && input$oligo=="Other" && is.null(geo_data())){
+  observeEvent(input$vis_dat,{
+    if(input$qc_method=="RLE" && input$oligo=="Affymetrix Human Genome U133 Plus 2.0 Array" && is.null(geo_data())){
       affy.data=fitPLM(celdat())
-      RLE(affy.data,main="RLE")
+      output$plot_raw<-renderPlot({
+        RLE(affy.data,main="RLE",las=2,cex.axis=0.5,ylab="Expression Values",xlab="",xaxt="n")
+        axis(1,at=1:length(rownames(affy.data@phenoData@data)),labels=plot_samplenames(),las=2,cex.axis=0.5)
+        title(xlab="Sample Names",line=4)
+        })
+      
     }
-    else if(input$qc_method=="NUSE" && input$oligo=="Other"&& is.null(geo_data())){
+    else if(input$qc_method=="NUSE" && input$oligo=="Affymetrix Human Genome U133 Plus 2.0 Array"&& is.null(geo_data())){
       affy.data=fitPLM(celdat())
-      NUSE(affy.data,main="NUSE")
+      output$plot_raw<-renderPlot({NUSE(affy.data,main="NUSE",las=2,cex.axis=0.5,ylab="Standard Error Values",xlab="",xaxt="n")
+      axis(1,at=1:length(rownames(affy.data@phenoData@data)),labels=plot_samplenames(),las=2,cex.axis=0.5)
+      title(xlab="Sample Names",line=4)})
     }
     
-    else if(input$qc_method=="RLE" && (input$oligo=="Gene ST Array" || input$oligo=="Exon ST Array")&& is.null(geo_data())){
+    else if(input$qc_method=="RLE" && (input$oligo=="Affymetrix Human Gene 1.0 ST Array" || input$oligo=="Affymetrix Human Exon 1.0 ST Array")&& is.null(geo_data())){
       oligo.data=oligo::fitProbeLevelModel(celdat())
-      RLE(oligo.data,main="RLE")
+      output$plot_raw<-renderPlot({oligo::RLE(oligo.data,main="RLE",las=2,cex.axis=0.5,ylab="Expression Values",xlab="",xaxt="n")
+      axis(1,at=1:length(rownames(oligo.data@protocolData@data)),labels=plot_samplenames(),las=2,cex.axis=0.5)
+      title(xlab="Sample Names",line=4)})
+      
     }
     
-    else if(input$qc_method=="NUSE"&& (input$oligo=="Gene ST Array" || input$oligo=="Exon ST Array")&& is.null(geo_data())){
+    else if(input$qc_method=="NUSE"&& (input$oligo=="Affymetrix Human Gene 1.0 ST Array" || input$oligo=="Affymetrix Human Exon 1.0 ST Array")&& is.null(geo_data())){
       oligo.data=oligo::fitProbeLevelModel(celdat())
-      NUSE(oligo.data,main="RLE")
+      output$plot_raw<-renderPlot({oligo::NUSE(oligo.data,main="NUSE",las=2,cex.axis=0.5,ylab="Standard Error Values",xlab="",xaxt="n")
+      axis(1,at=1:length(rownames(oligo.data@protocolData@data)),labels=plot_samplenames(),las=2,cex.axis=0.5)
+      title(xlab="Sample Names",line=4)})
     }
-    else if(input$qc_method=="NUSE"&& is.null(celdat())){
-      NUSE(fitPLM(geo_data()),main="NUSE")
+    else if(input$qc_method=="PCA"){
+      pcacomps_raw<-prcomp(exprs(celdat()),center=FALSE,scale=FALSE)
+      comps_raw<-pcacomps_raw$rotation
+      output$pc_comp_raw<-renderUI({
+        selectInput("compraw","Which components do you want to plot?",choices=colnames(comps_raw),multiple=TRUE)
+      })
+      output$feat_raw<-renderUI({
+        selectInput("featcolraw","Which feature do you want to group samples by?",choices=colnames(meet())[-1])
+      })
+      output$pcplot_raw_button<-renderUI({
+        actionButton("pcplot_raw","Plot Principal Components")
+      })
     }
-    else if(input$qc_method=="RLE"&& is.null(celdat())){
-      RLE(fitPLM(geo_data()),main="RLE")
-    }  
-    
-  }))
+    else if(input$qc_method=="Boxplot" && input$oligo=="Affymetrix Human Genome U133 Plus 2.0 Array" && is.null(geo_data())){
+      output$plot_raw<-renderPlot({boxplot(celdat(),xlab="",ylab="Gene Expression Values",main="Boxplot of Gene Expression for Each Sample",cex.axis=0.5,las=2,xaxt="n")
+        axis(1,at=1:length(plot_samplenames()),labels=plot_samplenames(),las=2,cex.axis=0.5)
+        title(xlab="Sample Names",line=4)})
+    }
+    else if(input$qc_method=="Boxplot" && input$oligo=="Affymetrix Human Gene 1.0 ST Array" && is.null(geo_data())){
+      output$plot_raw<-renderPlot({
+        databox<-celdat()
+        boxplot(fitProbeLevelModel(databox),xlab="",ylab="Gene Expression Values",main="Boxplot of Gene Expression for Each Sample",cex.axis=0.5,las=2,xaxt="n")
+        axis(1,at=1:length(plot_samplenames()),labels=plot_samplenames(),las=2,cex.axis=0.5)
+        title(xlab="Sample Names",line=4)})
+    }
+  })
+  
+  observeEvent(input$pcplot_raw,{
+    if(length(input$compraw)>2){
+      output$pcwarnraw<-renderText("Please only select two principal components.")
+    }
+    else if (length(input$compraw)<2){
+      output$pcwarnraw<-renderText("Please select two principal components.")
+    }
+    if(is.null(input$featcolraw)){
+      output$pcwarnraw<-renderText("Please specify a feature to group samples by.")
+    }
+    else{
+      output$pcwarnraw<-NULL
+      pcacomps1raw<-prcomp(exprs(celdat()),center=FALSE,scale=FALSE)
+      comps1raw<-pcacomps1raw$rotation
+      input_compraw<-as.vector(input$compraw)
+      pcsraw<-comps1raw[,input_compraw]
+      pc1raw<-pcsraw[,1]
+      pc2raw<-pcsraw[,2]
+      colorsraw<-meet()[,input$featcolraw]
+      data_to_plotraw<-data.frame(pc1raw,pc2raw,colorsraw)
+      praw<-ggplot(data_to_plotraw,aes(x=pc1raw,y=pc2raw,color=colorsraw))+stat_ellipse()
+      praw<-praw+geom_point()+labs(color=input$featcolraw)+ggtitle("PCA Plot for Raw Data")+xlab(input$compraw[1])+ylab(input$compraw[2])
+      met_info<-meet()
+      #met_info<-met_info[-1,]
+      praw<-praw+geom_text(aes(label=met_info[,1]),hjust=0,vjust=0,size=4)
+      output$plot_raw<-renderPlot(praw)
+    }
+  })
   
   #Visualize normalized data using Boxplot or PCA
-  #nk468188
   observeEvent(input$vis_button,{
     if(input$qc_method2=="Boxplot"){
-      output$plot_status<-renderText("Your plot is being generated.")
       output$qcplot<-renderPlot({
-        boxplot(final_qc_dat(),xlab="Sample Number",ylab="Gene Expression Values",main="Boxplot of Gene Expression for Each Sample",cex.axis=0.1,las=3)
+        boxplot(final_qc_dat(),xlab="",ylab="Gene Expression Values",main="Boxplot of Gene Expression for Each Sample",cex.axis=0.5,las=2,xaxt="n",yaxt="n")
+        axis(1,at=1:length(plot_samplenames()),labels=plot_samplenames(),las=2,cex.axis=0.5)
+        title(xlab="Sample Names",line=4)
       })
     }
     else if(input$qc_method2=="PCA"){
@@ -358,14 +440,13 @@ function(input,output,session){
         selectInput("comp_plot","Which components do you want to plot?",choices=colnames(comps),multiple=TRUE)
       })
       output$feat<-renderUI({
-        selectInput("feat_color","Which feature do you want to group samples by?",choices=colnames(meet()))
+        selectInput("feat_color","Which feature do you want to group samples by?",choices=colnames(meet())[-1])
       })
       
     }
   })
   
   #Specify Principal Components and Colors for PCA
-  #nk468188
   observeEvent(input$pcplot,{
     if(length(input$comp_plot)>2){
       output$pcwarn<-renderText("Please only select two principal components.")
@@ -386,8 +467,10 @@ function(input,output,session){
       pc2<-pcs[,2]
       colors<-meet()[,input$feat_color]
       data_to_plot<-data.frame(pc1,pc2,colors)
-      p<-ggplot(data_to_plot,aes(x=pc1,y=pc2,color=colors))
-      p<-p+geom_point()+labs(color=input$feat_color)+ggtitle("PCA Plot for Normalized Data")+xlab("PC1")+ylab("PC2")
+      p<-ggplot(data_to_plot,aes(x=pc1,y=pc2,color=colors))+stat_ellipse()
+      p<-p+geom_point()+labs(color=input$feat_color)+ggtitle("PCA Plot for Normalized Data")+xlab(input$comp_plot[1])+ylab(input$comp_plot[2])
+      met_2<-meet()
+      p<-p+geom_text(aes(label=met_2[,1]),hjust=0,vjust=0,size=4)
       output$qcplot<-renderPlot(p)
     }
   })
@@ -399,13 +482,13 @@ function(input,output,session){
     
     #Find outliers
     outlier_affy<-outliers(final_qc_dat(),method=as.vector(input$outmethod))
-    output$potout<-renderUI(names(as.vector(outlier_affy@which)))
+    #output$potout<-renderText(as.vector(names(outlier_affy@which)))
     values<-outlier_affy@statistic
     dat_fram<-data.frame(colnames(final_qc_dat()),values)
     #Visualize outlier statistic value for each sample
-    p<-ggplot(data=dat_fram,aes(x=dat_fram[,1],y=dat_fram[,2]))+geom_col()+geom_hline(yintercept=outlier_affy@threshold)+ggtitle("Potential Outliers")+labs(y="Value of Selected Statistic",x="Sample")+theme(axis.text.x=element_text(size=7))
+    p<-ggplot(data=dat_fram,aes(x=dat_fram[,1],y=dat_fram[,2]))+geom_col()+geom_hline(yintercept=outlier_affy@threshold)+ggtitle("Potential Outliers")+labs(y="Value of Selected Statistic",x="Sample")+theme(axis.text.x=element_text(size=3,angle=90))
     output$outplot<-renderPlot(p)
-    output$remove<-renderUI(selectInput("torem","Select outlier candidates you would like to remove.",multiple=TRUE,choices=as.list(names(outlier_affy@which))))
+    output$remove<-renderUI(selectInput("torem","Select outlier candidates you would like to remove.",multiple=TRUE,choices=as.list(names(outlier_affy@which))))})
     #Remove outliers and update expression matrix
     observeEvent(input$update,{
       expr_mat_2<-final_qc_dat()
@@ -416,24 +499,29 @@ function(input,output,session){
         expr_mat_2<-expr_mat_2[,-ind_to_remove]
         meta_sample_names=meta_datframe[,1]
         meta_ind_to_remove<-which(meta_sample_names==name)
-        meta_matrix<-meta_datframe[,-meta_ind_to_remove]
+        meta_datframe<-meta_datframe[-meta_ind_to_remove,]
       }
       #Update reactive value
       final_qc_dat(expr_mat_2)
       meta_data(meta_datframe)
       #Table of expression data with outlier samples removed
-      output$newexprs<-renderDT({
-        datatable(expr_mat_2,extensions = c('Responsive'), class = 'cell-border stripe',
-                  options = list(pageLength = 10,responsive = TRUE))
+      output$newexprs<-renderDataTable({
+        matr<-final_qc_dat()
+        veccolnames<-colnames(matr)
+        veccoltodatfram<-as.data.frame(veccolnames)
+        datatable(veccoltodatfram,extensions = c('Responsive'), class = 'cell-border stripe',
+                  options = list(pageLength = 10,responsive = TRUE),
+                  colnames=c('Sample Index','Sample Name'))
         })
     })
-  })
+
   
   
   observeEvent(input$grouped, {
     updateTabItems(session, "tabs", "degAnalysis")
   }
   )
+  
   
   ####STATISTICAL ANALYSIS####
   #Data Annotation
@@ -469,7 +557,12 @@ function(input,output,session){
       
       data_stat<-data_for_an()
       #Get gene symbols from hgu133plus.db
-      symbols<-AnnotationDbi::select(hgu133plus2.db, keys=row.names(data_stat), columns=c("SYMBOL"))
+      if(input$oligo=="Affymetrix Human Gene 1.0 ST Array"){
+        symbols<-AnnotationDbi::select(hugene11sttranscriptcluster.db, keys=row.names(data_stat), columns=c("SYMBOL"))
+      }
+      else{
+        symbols<-AnnotationDbi::select(hgu133plus2.db, keys=row.names(data_stat), columns=c("SYMBOL"))
+      }
       
       #Remove duplicate ProbeIDs
       symbols <- symbols[!duplicated(symbols$PROBEID),]
@@ -493,7 +586,6 @@ function(input,output,session){
   filtered_dat<-NULL
   
   #Filter genes with low levels of expression
-  #marmomeni
   observeEvent(input$filt_gen,filtered_dat<-({
     dat_for_filter<-annotated_data()
     gene_means<-rowMeans(dat_for_filter)
@@ -504,14 +596,12 @@ function(input,output,session){
   
   
   #Adds to UI features of samples from metadata, user can select which features they wish to compare based on
-  #nk468188
   output$col_selection<-renderUI({
-    selectInput("col_int","Select the feature you wish to analyze further",choices=colnames(meet()))
+    selectInput("col_int","Select the feature you wish to analyze for differential gene expression.",choices=colnames(meet())[-1])
   })
   
   
   #Find DEGs
-  #nk468188
   desmat1<-reactiveVal()
   final_result<-eventReactive(input$degs,{
     
@@ -524,31 +614,61 @@ function(input,output,session){
     }
     met_dat<-meta_data()
     index_col<-which(colnames(met_dat)==input$col_int)
-    #marmomeni
     variable<-factor(met_dat[,index_col])
     des_matrix<-model.matrix(~0+variable,met_dat)
     desmat1(des_matrix)
     colnames(des_matrix)<-c("Factor_a","Factor_b")
+    
     fitting<-lmFit(dat_for_stat,des_matrix)
     fac1<-colnames(as.data.frame(des_matrix))[1]
     fac2<-colnames(as.data.frame(des_matrix))[2]
     phr<-c(paste(fac1,fac2,sep="-"))
-    con_mat<-makeContrasts(contrasts=phr,levels=colnames(des_matrix))
+    con_mat<-makeContrasts(contrasts=phr,levels=des_matrix)
     fit.contrast<-contrasts.fit(fitting,con_mat)
     stat.con<-eBayes(fit.contrast)
-    result<-topTable(stat.con,sort.by="p",p.value=input$p_val,number=length(rownames(dat_for_stat)))
+    result<-topTable(stat.con,sort.by="p",p.value=input$p_val,lfc=input$fc_cut,number=length(rownames(dat_for_stat)))
+    lfc2<-result$logFC
+    for(lfcval_index in 1:length(lfc2)){
+      if(length(lfc2)==0){
+        result<-result
+      }
+      else if(abs(as.integer(lfc2[lfcval_index]))< abs(as.integer(input$fc_cut))){
+        result<-result[-c(lfcval_index),] %>% head()
+      }
+    }
     
+    dimension<-dim(result)
+    if(dimension[1]==0){
+      des_matrix<-model.matrix(~variable,met_dat)
+      colnames(des_matrix)<-c("Factor_a","Factor_b")
+      fitting<-lmFit(dat_for_stat,des_matrix)
+      fac1<-colnames(as.data.frame(des_matrix))[1]
+      fac2<-colnames(as.data.frame(des_matrix))[2]
+      phr<-c(paste(fac1,fac2,sep="-"))
+      con_mat<-makeContrasts(contrasts=phr,levels=des_matrix)
+      fit.contrast<-contrasts.fit(fitting,con_mat)
+      stat.con<-eBayes(fit.contrast)
+      result<-topTable(stat.con,sort.by="p",p.value=input$p_val,lfc=input$fc_cut,number=length(rownames(dat_for_stat)))
+      lfc2<-result$logFC
+      for(lfcval_index in 1:length(lfc2)){
+        if(abs(lfc2[lfcval_index]) < abs(input$fc_cut)){
+          result<-result[-c(lfcval_index),] %>% head()
+        }
+      }
+      #output$error<-renderPrint({c(result,result[-1,],lfc2,1:length(lfc2))})
+    }
+    result
   }
   )
   
   output$toptab<-renderDT({
-    datatable(final_result(),extensions = c('Responsive'), class = 'cell-border stripe',
-              options = list(pageLength = 10,responsive = TRUE))
+    datatable(final_result(),extensions = c('Responsive','Buttons'), class = 'cell-border stripe',
+              options = list(order = list(5, 'asc'),
+                             pageLength = 10,responsive = TRUE))
   })
   
   
   #Reactive Volcano Plot inputs
-  #disha-22
   volcano_p<-reactive({input$m})
   volcano_fc<-reactive({as.numeric(input$n)})
   
@@ -572,7 +692,6 @@ function(input,output,session){
   
   ######FUNCTIONAL ANALYSIS######
   
-  #disha-22
   genelist<-reactive({
     gene_table<-final_result()
     GSEA.entrez <- AnnotationDbi::select(org.Hs.eg.db, keys=rownames(data.frame(gene_table)), columns=c("ENTREZID"),keytype="SYMBOL")
@@ -589,22 +708,46 @@ function(input,output,session){
   h <- msig %>% select(gs_name, entrez_gene)
   
   observeEvent(input$gsea,output$plot_gsea <- renderPlot({
-    gsea <- GSEA(genelist(), TERM2GENE=h, eps=0)
-    gseaplot2(gsea, geneSetID=1:5, pvalue_table=T)
+    gsea <- GSEA(genelist(), TERM2GENE=h,eps=0)
+    #c("genelist",genelist(),"gsea",gsea)
+    gseaplot2(gsea, geneSetID=1:length(gsea$enrichmentScore), pvalue_table=TRUE,title="GSEA Results")
   }))
   
   
   #marmomeni and disha-22
   eKegg <- reactive({
     gene_entrez<-genelist()
-    enrichKEGG(gene = names(gene_entrez), organism = "hsa")
+    enrichKEGG(gene = names(gene_entrez), organism = "hsa",pvalueCutoff=input$KEGG_pcut)
   })
-  observeEvent(input$kegg,output$dotplot <- renderPlot({
-    dotplot(eKegg(), showCategory = input$x)
-  }))
-  observeEvent(input$kegg,output$barplot <- renderPlot({
-    barplot(eKegg(), showCategory = input$y)
-  }))
+  max_kegg<-reactive({
+    if(is.null(eKegg)){
+      return(20)
+    }
+    else{
+      enrichobj<-eKegg()
+      nrow(enrichobj@result)
+    }
+  })
+  output$kegg_y<-renderUI({
+    sliderInput("y", "Number of pathways shown", 0, max_kegg(),
+                value =10, step = 2)
+  })
+  observeEvent(input$kegg,{
+    if(is.null(eKegg())){
+      output$keggwarn<-renderText("There are no enriched pathways at this cutoff adjusted p-value.")
+    }
+    else{
+      output$dotplot <- renderPlot(clusterProfiler::dotplot(eKegg(), showCategory = input$y))
+    }
+  })
+  observeEvent(input$kegg, {
+    if(is.null(eKegg())){
+      output$barplot<-NULL
+    }
+    else{
+      output$barplot <- renderPlot(barplot(eKegg(), showCategory = input$y))
+    }
+  })
   
   ont_cat<-reactive({
     if(input$type=="Cellular Components"){
@@ -617,6 +760,8 @@ function(input,output,session){
       return("BP")
     }
   })
+  
+ 
   #disha-22
   enrichedgo <- reactive({
     entrez_gene<-genelist()
@@ -624,48 +769,36 @@ function(input,output,session){
              OrgDb = org.Hs.eg.db, 
              ont = ont_cat(), 
              readable = T, 
-             pAdjustMethod = "fdr")
+             pAdjustMethod = "fdr",
+             pvalueCutoff=input$funcpcutGO)
+  })
+  max_go<-reactive({
+    if(is.null(enrichedgo)){
+      return(20)
+    }
+    else{
+      enrichobj2<-enrichedgo()
+      length(enrichobj2@result$Description)
+    }
+  })
+  output$go_a<-renderUI({
+    sliderInput("a", "Number of pathways shown", 0, max_go(),
+                value =10, step = 2)
   })
   enrichedforplot <- reactive({setReadable(enrichedgo(), OrgDb = org.Hs.eg.db)})
   observeEvent(input$go,output$dotplot2 <- renderPlot({
-    dotplot(enrichedforplot(), showCategory = input$a)
+    clusterProfiler::dotplot(enrichedforplot(), showCategory = input$a)
   }))
   observeEvent(input$go,output$barplot2 <- renderPlot({
-    barplot(enrichedforplot(), showCategory = input$b)
+    barplot(enrichedforplot(), showCategory = input$a)
   }))
   observeEvent(input$go,output$GOgraph <- renderPlot({
     plotGOgraph(enrichedforplot())
   }))
   
-  output$exportgsea <- downloadHandler(
-    filename=function(){
-      paste(input$plot_gsea,".png",sep='')
-    },
-    content=function(file){
-      ggsave(file,plot=plot_gsea(),device=device)
-    }
-  )
-  
-  output$exportkegg <- downloadHandler(
-    filename=function(){
-      paste(input$plot_kegg,".png",sep='')
-    },
-    content=function(file){
-      ggsave(file,plot=plot_kegg(),device=device)
-    }
-  )
-  
-  output$exportgo <- downloadHandler(
-    filename=function(){
-      paste(input$plot_go,".png",sep='')
-    },
-    content=function(file){
-      ggsave(file,plot=plot_go(),device=device)
-    }
-  )
   
   
   
-  ### END: DATA IMPORT AND QC SERVER CODE ###
+  
   
 }

@@ -23,14 +23,11 @@ dataImportTab <- tabItem(tabName = "dataImport",
                            choices=list("Expression Data File (CSV/TXT)",
                                         "Raw Affymetrix Data (CEL Files)",
                                         "GEO Accession Number",
-                                        "Load 5 Samples Data (Raw)"),
+                                        "Load Demo Data (Raw)"),
                            width = '350px')
                ),
           column(8,
-             conditionalPanel(condition="input.dat_type=='GEO Accession Number'",
-                                       textInput("geoname",
-                                                 "Enter GEO accession ID:")),
-             conditionalPanel(condition="input.dat_type=='Expression Data File (CSV/TXT)' | input.dat_type=='Raw Affymetrix Data (CEL Files)'",
+             conditionalPanel(condition="input.dat_type=='Expression Data File (CSV/TXT)' | input.dat_type=='Raw Affymetrix Data (CEL Files)'  | input.dat_type=='GEO Accession Number'",
               fluidRow(
                   column(6,
                          fileInput("metadata","Metadata (CSV)")
@@ -58,9 +55,14 @@ dataImportTab <- tabItem(tabName = "dataImport",
                         )
                )
             ),
-            conditionalPanel(condition="input.dat_type=='Load 5 Samples Data (Raw)'",
+            conditionalPanel(condition="input.dat_type=='GEO Accession Number'",
+                             fluidRow(
+                                column(12,
+                                       textInput("geoname",
+                                                 "Enter GEO accession ID:",width='200px')))),
+            conditionalPanel(condition="input.dat_type=='Load Demo Data (Raw)'",
                     div(
-                    HTML("5 samples data selected. "),
+                    HTML("Demo data selected. "),
                     a(href="demoData.zip", "Download", download=NA, target="_blank"),
                     HTML("from here."))
             )

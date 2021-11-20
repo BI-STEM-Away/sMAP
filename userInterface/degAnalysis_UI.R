@@ -19,29 +19,26 @@ topDEGsTab <- tabItem(tabName = "topDEGs",
                       HTML("<HR>"),
                       HTML("<BR>"),
                       fluidRow(
-                        column(4,
+                        column(6,
                                #Input for genes to cutoff
                                #marmomeni
                                numericInput("cutoff","What percent of genes should be filtered out?",value=0),
-                               #ShreyaVora14
+                               actionButton("filt_gen","Filter Out Genes"),
+                                #ShreyaVora14
+                               HTML("<BR>"),
                                tags$div(
                                  tags$p("The percent of genes you choose will be the percent of genes that will be filtered because of the low levels of expression. Additionally any duplicates or NA gene symbols will be removed.")
                                )
                         ),
-                        column(2,
-                               actionButton("filt_gen","Filter Out Genes"),
-                               
-                        ),
-                        column(4,
-                               numericInput("p_val","Cutoff adjusted p-value:",value=0.05),
-                               numericInput("fc_cut","Cutoff LogFC Value:",value=1),
-                               tags$div(
+                        column(6,
+                               sliderInput("fc_cut","Cutoff LogFC Value:",min=0,max=5,value=1),
+                               sliderInput("p_val","Cutoff adjusted p-value:",min=1e-15,max=0.2,value=0.05),
+                               actionButton("degs","Find DEGs"),
+                               HTML("<BR>"),
+                                tags$div(
                                  tags$p("Genes with a lower adjusted p-value than the cutoff and with a higher magnitude log fold change will be considered significantly differentially expressed.")
                                )
                         ),
-                        column(2,
-                               actionButton("degs","Find DEGs")
-                        )
                       ),
                       HTML("<HR>"),
                       HTML("<BR>"),
@@ -81,11 +78,9 @@ volcanoPlotTab <- tabItem(tabName = "volcanoPlot",
                                #ShreyaVora14
                                p("Volcano plots are a visualization used for differential gene expression analysis. The x-axis represents log-fold change and the y-axis 
   represents p-value. "),
-                               sliderInput("n", "LogFC cutoff", 0, 5,
-                                           value =1, step = 0.05),
-                               shinyWidgets::sliderTextInput("m", "Adjusted P-Value cutoff", 
-                                                             choices=c(1e-1,5e-2,1e-2,5e-3,1e-3,5e-4,1e-4,5e-5,1e-5,5e-6),
-                                                             grid=TRUE)
+                               sliderInput("n", "Cutoff LogFC Value:",min=0,max=5,value=1),
+                               sliderInput("m", "Cutoff adjusted p-value:",min=1e-15,max=0.2,value=0.05),
+                               checkboxInput("labs_volc","Gene Names")
                         ),
                         column(9,
                                plotOutput("plot1")

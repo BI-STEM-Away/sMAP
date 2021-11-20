@@ -11,10 +11,12 @@ output: html_document
 * Nikita Krishnan
 * Disha Chauhan
 * Arian Veyssi
+* Maryam Momeni
 * Roman Ramirez
 * Hou Wang (Ivan) Lam
 * Aditi Verma
 * Huikun (Kelly) Li
+* Sneha Raj
 
 ## Acknowledgement:
 

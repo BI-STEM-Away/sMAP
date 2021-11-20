@@ -15,7 +15,7 @@ This repo contains production code of sMAP and maintained by @[samuelbharti](htt
 
 - R version used: 4.0
 - Current Deployment: AWS
-- Docker Image: Available here soon.
+- Docker Image: ` docker pull samuelbharti/smap `
 
 ---
 #### Steps to run at localhost

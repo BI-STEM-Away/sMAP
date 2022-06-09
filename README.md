@@ -7,7 +7,7 @@ This repo contains production code of sMAP and maintained by @[samuelbharti](htt
 - sMAP Webserver 1: [Docker Based](http://ec2-3-131-158-100.us-east-2.compute.amazonaws.com/)
 - Project Overview: [https://bi-stem-away.github.io/sMAP/](https://bi-stem-away.github.io/sMAP/)
 - Documenation:     [https://bi-stem-away.github.io/sMAP_doc/](https://bi-stem-away.github.io/sMAP_doc/)
-- sMAP Tutorial:    Available soon.
+- sMAP Tutorial:    [https://mentorchains.github.io/STEM-AWAY_AWS_BI_2021/sMAP_demo.pdf](https://mentorchains.github.io/STEM-AWAY_AWS_BI_2021/sMAP_demo.pdf)
 - STEM-Away:       [https://stemaway.com/](https://stemaway.com/)
 
 ---

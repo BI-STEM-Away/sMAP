@@ -3,8 +3,8 @@
     <tr >
       <!-- Names -->
       <td style="margin-bottom:0; max-width:200px" >
-      <img style="border: 2px solid black;  filter: grayscale(15%);" 
-      height="100" alt="screen shot 2017-08-07 at 12 18 15 pm" 
+      <img style="border: 2px solid black;  filter: grayscale(15%); height:100px !important; width:auto;" 
+      height="220" alt="screen shot 2017-08-07 at 12 18 15 pm" 
       src="https://bi-stem-away.github.io/sMAP/images/Samuel.jpg">
       </td>
       <td style="font-size:85%;padding:5px;max-width:380px">
